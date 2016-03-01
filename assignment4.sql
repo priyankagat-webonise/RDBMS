@@ -1,0 +1,1 @@
+select p.product_id,p.product_name,u.name from products p INNER JOIN ordered od ON p.product_id=od.product_id INNER JOIN customer c ON od.order_id=c.order_id INNER JOIN users u ON c.user_id=u.user_id where u.user_type='seller';
