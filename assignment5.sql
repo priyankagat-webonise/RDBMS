@@ -1,0 +1,1 @@
+create or replace view sellers_report as select o.order_id,u.name,o.order_cost,o.date from customer c inner join orders o on c.order_id=o.order_id inner join users u on u.user_id=c.user_id where u.user_type='seller';
